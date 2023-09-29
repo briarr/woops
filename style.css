@@ -1,0 +1,82 @@
+section:not(#three) {
+    height: 400px;
+    margin: 10px 0;
+  }
+  #one {
+    background-color: rgb(150, 150, 150);
+  }
+  #two {
+    background-color: rgb(205, 205, 205);
+  }
+  #three {
+    background-color: rgb(150, 150, 150);
+    width: 400px;
+    margin-bottom: 200px;
+  }
+  div {
+    width: 90px;
+    height: 90px;
+    border: 3px solid black;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #two div {
+    width: 400px;
+  }
+  #red {
+    background-color: red;
+  }
+  #green {
+    background-color: green;
+  }
+  #blue {
+    background-color: blue;
+  }
+  #orange {
+    background-color: orange;
+  }
+  #purple {
+    background-color: purple;
+  }
+  #brown {
+    background-color: brown;
+  }
+  p {
+    margin: 0;
+    background-color: #0C2340;
+    border: 2px solid #AE9142;
+    font-size: 30px;
+    color: #C99700;
+    text-align: center;
+  }
+  p:nth-of-type(even) {
+    color: #00843D;
+  }
+  
+  /* START BELOW THIS LINE */
+
+#one {
+/*Using a flexbox CSS property, move the three boxes to the upper right corner of the container (AKA Dark Grey box)*/
+    display:flex;
+    flex-direction: row-reverse;
+/*Using another flexbox CSS property, change the main axis for this Flex/Flexbox container from the x (AKA Horizontal) to the y axis (AKA vertical axis). (If this is done correctly, then the Red, Green, and Blue squares will display stacked above each other in the lower left corner of the container.)*/
+    flex-direction: column-reverse;
+/* Using another flexbox CSS property, move the three boxes to the right so they are centered horizontally inside the container (AKA Dark Grey box)*/
+    align-items:center;
+  }
+
+#two {
+/*Using a flexbox CSS property, move the three boxes down so they are centered vertically inside the container (AKA Light Grey box)*/
+display: flex;
+align-items: center;
+  }
+
+#three {
+display: grid;
+grid-auto-flow: column;
+}
